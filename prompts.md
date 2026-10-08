@@ -22,14 +22,69 @@ Borra el ejemplo de abajo cuando escribas el primero.
 
 ## Prompt 1
 
-**Modelo:** Opus 1M xHigh
+**Modelo:** Sonnet 5.5
 **Herramienta:** Claude Code
 
 ```
-Este es el ejemplo. Bórralo.
-
-El prompt va aquí dentro, entero y con sus saltos de línea,
-para que se sepa dónde empieza y dónde acaba.
+Lee los scenarios de la spec viva de esta feature "Lo que cada tarea muestra de su responsable" y los tests existentes.
+  Genera una tabla de trazabilidad: cada criterio de aceptación → qué prueba lo cubre → cubierto / NO cubierto.
+  No cambies nada.
 ```
 
 **Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+Funciono, me dio resultado de que ninguno de los casos tiene pruebas. Pero, tambien reviso el siguiente requerimiento no solo el que le pedi.
+---
+
+## Prompt 2
+
+**Modelo:** Sonnet 5.5
+**Herramienta:** Claude Code
+
+```
+Lee los scenarios de la spec viva de esta feature "Lo que cada tarea muestra de su responsable" y los tests existentes.
+  Genera una tabla de trazabilidad: cada criterio de aceptación → qué prueba lo cubre → cubierto / NO cubierto.
+  No cambies nada.
+```
+
+**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+
+---
+
+## Prompt 3
+
+**Modelo:** Sonnet 5.5
+**Herramienta:** Claude Code
+
+```
+SHALL trabajar sobre el requerimiento "Lo que cada tarea muestra de su responsable" y SHALL NOT trajar ningun otro. Escribir los test necesarios para cubrir el requerimiento. Los test deben SHALL ser concretos, utilizando solo los
+  estados y la information actual, SHALL NOT inventar valores sin sentido. Los tests que escribas van en backend/tests/functional/tasks/, siguiendo el estilo de los que ya hay en backend/tests/functional/auth/. No toques nada fuera de backend/tests/
+```
+
+**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+Escribio los tests aunque algunos fallaron. 
+
+---
+
+## Prompt 4
+
+**Modelo:** Sonnet 5.5
+**Herramienta:** Claude Code
+
+```
+hay algun edge case en la feature que se me este pasando basandote en la spec.
+```
+
+**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+me mostro edge cases de los caules algunos considero validos.
+
+---
+
+## Prompt 5
+
+
+```
+de los tests que escribiste, comprobastes que estuvieran correctos? o presentan fallas?
+```
+
+**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+me dio informacion a cerca de porque 4 test fallan pero debido a la restriccion de no tocar nada fuera de /test no intento arreglar el codigo ya que presenta fallas en la logica.
